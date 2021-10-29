@@ -1,0 +1,144 @@
+.container {
+  max-width: rem(920);
+  flex-direction: column;
+  gap: rem(32);
+  background-color: $white;
+  border-radius: rem(20);
+  margin: auto;
+  padding: rem(32);
+
+  &__inputs {
+    flex-direction: column;
+    justify-content: center;
+    gap: rem(47);
+    width: 100%;
+    padding-top: rem(19);
+    padding-bottom: rem(19);
+  }
+
+  &__results {
+    flex-direction: column;
+    border-radius: rem(20);
+    background-color: $dark-cyan-primary;
+    padding: rem(40);
+    padding-top: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  /* For desktop: */
+  .container {
+    flex-direction: row;
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: rem(14);
+  font: bold rem(12) $spacemono;
+  color: $dark-grey-text;
+
+  &__validation {
+    color: $validation;
+  }
+}
+
+.input {
+  width: 100%;
+  height: rem(44);
+  padding: rem(16);
+  background-color: $text-content;
+  border: none;
+  border-radius: rem(7);
+  font: bold rem(18) $spacemono;
+  color: $dark-cyan-primary;
+  text-align: right;
+
+  &__false {
+    outline: rem(2) solid $validation;
+
+    &:focus,
+    &:hover {
+      outline: rem(2) solid $validation !important;
+      cursor: pointer;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    outline: rem(2) solid $light-cyan-primary;
+    cursor: pointer;
+  }
+
+  &::placeholder {
+    color: $light-grey-text;
+  }
+}
+
+.img {
+  position: absolute;
+  padding: rem(16);
+}
+
+.tipselector {
+  margin-top: rem(22);
+  display: grid;
+  grid-auto-rows: rem(48);
+  grid-template-columns: repeat(auto-fill, minmax(rem(117), 1fr));
+  gap: rem(15);
+}
+
+.button {
+  width: 100%;
+  background-color: $dark-cyan-primary;
+  border: none;
+  border-radius: rem(7);
+  font: bold rem(18) $spacemono;
+  color: $white;
+
+  &:focus,
+  &:hover {
+    background-color: $light-cyan-primary;
+    color: $dark-cyan-primary;
+    cursor: pointer;
+  }
+}
+
+.custom::placeholder {
+  text-align: center;
+  color: $dark-grey-text;
+}
+.tip {
+  margin-top: rem(60);
+
+  &__h1 {
+    font-size: rem(12);
+    color: $white;
+  }
+
+  &__person {
+    font-size: rem(10);
+    color: $dark-grey-text;
+  }
+
+  &__value {
+    font-size: rem(36);
+    color: $light-cyan-primary;
+  }
+}
+
+.btn-reset {
+  margin-top: rem(138);
+  height: rem(48);
+  border: none;
+  border-radius: rem(10);
+  background-color: hsl(183, 79, 24);
+  font: bold rem(14) $spacemono;
+  color: $dark-cyan-primary;
+
+  &:hover {
+    background-color: $light-cyan-primary;
+    cursor: pointer;
+  }
+}

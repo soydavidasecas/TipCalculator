@@ -1,0 +1,8 @@
+clases
+
+contenedor - inputs - resultado
+label
+inputs
+input custom - solo cambia tama;o
+botones
+boton reset
